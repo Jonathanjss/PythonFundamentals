@@ -31,7 +31,7 @@ while stateValue:
     addProduct()
   elif decision == "no":
     printProducts()
-    break
+    stateValue = False
   else:
     print('That\'s not a valid answer. Try again\n')
     continue
