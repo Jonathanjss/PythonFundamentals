@@ -22,6 +22,7 @@ def showContacts():
     counter = 1
     if len(contactList) == 0:
         print('\nYour contact list is empty :(\n')
+        initApp()
     else:
         print('#### CONTACT LIST ####')
         for contact in contactList:
@@ -58,6 +59,7 @@ def deleteContact():
     counter = 1
     if len(contactList) == 0:
         print('\nYour contact list is empty :(\n')
+        initApp()
     else:
         print('#### CONTACT LIST ####')
         for contact in contactList:
@@ -84,6 +86,7 @@ def showContactDetails():
     counter = 1
     if len(contactList) == 0:
         print('\nYour contact list is empty :(\n')
+        initApp()
     else:
         print('#### CONTACT LIST ####')
         for contact in contactList:
