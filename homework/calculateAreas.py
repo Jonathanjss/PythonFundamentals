@@ -80,6 +80,7 @@ def afterShowingResults(userSelection):
     if userSelection == 1:
         initApp()
     elif userSelection == 2:
+        print("Bye.")
         sys.exit()
     else:
         while True:
@@ -89,11 +90,17 @@ def afterShowingResults(userSelection):
 
 def showResults():
     print('##### LIST OF RESULTS #####')
-    for result in resultsList:
-        print(f'\nShape: {result["figure"]}\nArea: {result["result"]} m^2')
-    print('\nWhat would you like to do?\n\t1) Calculate area of a figure.\n\t2) Exit.')
-    userSelection = int(input('Please choose an option: '))
-    afterShowingResults(userSelection)
+    if len(resultsList) == 0:
+        print('Your result list is empty\n')
+        print('\nWhat would you like to do?\n\t1) Calculate area of a figure.\n\t2) Exit.')
+        userSelection = int(input('Please choose an option: '))
+        afterShowingResults(userSelection)
+    else:
+        for result in resultsList:
+            print(f'\nShape: {result["figure"]}\nArea: {result["result"]} m^2')
+        print('\nWhat would you like to do?\n\t1) Calculate area of a figure.\n\t2) Exit.')
+        userSelection = int(input('Please choose an option: '))
+        afterShowingResults(userSelection)
 
 def menuApp(userSelection):
     if userSelection == 1:
