@@ -88,8 +88,9 @@ def afterShowingResults(userSelection):
 
 
 def showResults():
+    print('##### LIST OF RESULTS #####')
     for result in resultsList:
-        print(f'\nShape Selected: {result["figure"]}\nArea:{result["result"]} m^2')
+        print(f'\nShape: {result["figure"]}\nArea: {result["result"]} m^2')
     print('\nWhat would you like to do?\n\t1) Calculate area of a figure.\n\t2) Exit.')
     userSelection = int(input('Please choose an option: '))
     afterShowingResults(userSelection)
